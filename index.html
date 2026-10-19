@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melovix AI - Music & Video Creator</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b14;
+    color: white;
+}
+header {
+    padding: 22px 18px;
+    background: #141426;
+    border-bottom: 1px solid #292943;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #c084fc;
+}
+.logo span {
+    color: white;
+}
+.badge {
+    background: #292943;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.hero {
+    padding: 38px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #24103f, #10152d, #0b0b14);
+}
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+.hero h1 span {
+    color: #c084fc;
+}
+.hero p {
+    color: #c4c4d4;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.button {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+.primary {
+    background: #a855f7;
+    color: white;
+}
+.secondary {
+    background: #24243b;
+    color: white;
+    border: 1px solid #41415f;
+}
+section {
+    padding: 25px 18px;
+}
+h2 {
+    font-size: 21px;
+    margin-bottom: 16px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+.card {
+    background: #171727;
+    border: 1px solid #303047;
+    border-radius: 15px;
+    padding: 18px 14px;
+}
+.icon {
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.card p {
+    color: #b7b7ca;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.form-box {
+    background: #171727;
+    border: 1px solid #303047;
+    padding: 18px;
+    border-radius: 15px;
+}
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 14px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 9px;
+    background: #0d0d19;
+    border: 1px solid #3b3b55;
+    color: white;
+    font-size: 15px;
+}
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.form-box .button {
+    width: 100%;
+    margin-top: 16px;
+}
+.note {
+    color: #b7b7ca;
+    font-size: 12px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+#message {
+    margin-top: 15px;
+    line-height: 1.5;
+    color: #d8b4fe;
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #9999b1;
+    border-top: 1px solid #292943;
+    font-size: 13px;
+    line-height: 1.8;
+}
+@media (max-width: 350px) {
+    .cards { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 29px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">♪ Melo<span>vix AI</span></div>
+    <div class="badge">AI CREATIVE STUDIO</div>
+</header>
+
+<div class="hero">
+    <h1>Your Music.<br>Your Vision.<br><span>Powered by AI.</span></h1>
+    <p>Create original songs, explore music ideas, and plan amazing music videos — all in one creative studio.</p>
+    <button class="button primary" onclick="document.getElementById('creator').scrollIntoView({behavior:'smooth'})">
+        Start Creating ✨
+    </button>
+</div>
+
+<section>
+    <h2>🎨 Your Creative Studio</h2>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">🎵</div>
+            <h3>AI Music</h3>
+            <p>Develop song ideas, genres, moods and original music concepts.</p>
+        </div>
+        <div class="card">
+            <div class="icon">✍️</div>
+            <h3>Lyrics Studio</h3>
+            <p>Write lyrics and turn your ideas into structured songs.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🎬</div>
+            <h3>Music Videos</h3>
+            <p>Plan scenes and visual concepts that match your music.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🌟</div>
+            <h3>AI Artist Ideas</h3>
+            <p>Explore virtual artist identities, looks and creative styles.</p>
+        </div>
+    </div>
+</section>
+
+<section id="creator">
+    <h2>🎤 Create Your Music Idea</h2>
+    <div class="form-box">
+        <label for="title">Song title</label>
+        <input id="title" placeholder="e.g. My Beautiful Life">
+
+        <label for="genre">Music genre</label>
+        <select id="genre">
+            <option>Afrobeats</option>
+            <option>Gospel</option>
+            <option>Afropop</option>
+            <option>Hip-hop</option>
+            <option>R&B</option>
+            <option>Pop</option>
+            <option>Reggae</option>
+            <option>Dance music</option>
+        </select>
+
+        <label for="mood">Song mood</label>
+        <select id="mood">
+            <option>Happy and uplifting</option>
+            <option>Romantic</option>
+            <option>Inspirational</option>
+            <option>Emotional</option>
+            <option>Energetic</option>
+            <option>Peaceful</option>
+        </select>
+
+        <label for="lyrics">Describe your song or enter your lyrics</label>
+        <textarea id="lyrics" placeholder="Write your song idea or lyrics here..."></textarea>
+
+        <button class="button primary" onclick="createIdea()">Create Song Plan ✨</button>
+
+        <div id="message" aria-live="polite"></div>
+        <p class="note">This starter version creates a song plan in your browser. Real AI-generated audio and videos will be added when we connect generation services.</p>
+    </div>
+</section>
+
+<section>
+    <h2>🚀 The Melovix AI Vision</h2>
+    <div class="card">
+        <p>Our goal is to bring music creation and visual storytelling together. Start with your idea, develop your song, then build a music video to match.</p>
+    </div>
+</section>
+
+<footer>
+    <strong>Melovix AI</strong><br>
+    Your Music. Your Vision. Your Creation.<br>
+    © 2026 Melovix AI
+</footer>
+
+<script>
+function createIdea() {
+    const title = document.getElementById('title').value.trim();
+    const genre = document.getElementById('genre').value;
+    const mood = document.getElementById('mood').value;
+    const lyrics = document.getElementById('lyrics').value.trim();
+    const message = document.getElementById('message');
+
+    if (!title && !lyrics) {
+        message.textContent = 'Please enter a song title or describe your song first.';
+        return;
+    }
+
+    const planTitle = title || 'Untitled song';
+    message.textContent =
+        'Your song plan is ready! Title: ' + planTitle +
+        '. Genre: ' + genre +
+        '. Mood: ' + mood +
+        '. Your idea is ready for the next creative step. Actual AI audio generation will be connected in a future version.';
+}
+</script>
+
+</body>
+                          </html>
